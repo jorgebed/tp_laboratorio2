@@ -75,7 +75,7 @@ namespace ClasesInstanciables
             //XmlSer.Serialize(XmlTw, uni);
             //XmlTw.Close();
             //return true;
-            Xml < Universidad > DatosXml = new Xml<Universidad>();
+            Xml <Universidad> DatosXml = new Xml<Universidad>();
             return DatosXml.Guardar("Universidad.xml", uni);
         }
 
@@ -158,7 +158,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// La igualación entre un Universidad y una Clase retornará el primer Profesor capaz de dar esa clase. 
+        /// Retorna el primer Profesor capaz de dar esa clase. 
         /// Sino, lanzará la Excepción SinProfesorException.
         /// </summary>
         /// <param name="u"></param>
@@ -175,7 +175,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// El distinto retornará el primer Profesor que no pueda dar la clase.
+        /// Retorna el primer Profesor que no pueda dar la clase.
         /// </summary>
         /// <param name="g"></param>
         /// <param name="clase"></param>
@@ -215,7 +215,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// Se agregarán Alumnos mediante el operador +, validando que no estén previamente cargados.
+        /// Agrega Alumnos mediante el operador +, validando que no estén previamente cargados.
         /// </summary>
         /// <param name="u"></param>
         /// <param name="a"></param>
@@ -234,7 +234,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// Se agregarán Profesores mediante el operador +, validando que no estén previamente cargados.
+        /// Agrega Profesores mediante el operador +, validando que no estén previamente cargados.
         /// </summary>
         /// <param name="u"></param>
         /// <param name="i"></param>

@@ -28,7 +28,7 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// Retornará todos los datos del Universitario.
+        /// Retorna todos los datos del Universitario.
         /// </summary>
         /// <returns></returns>
         protected virtual string MostrarDatos()
@@ -39,13 +39,14 @@ namespace EntidadesAbstractas
 
             return sb.ToString();;
         }
+
         protected abstract string ParticiparEnClase();
 
         #endregion
 
         #region SOBRECARGAS
         /// <summary>
-        /// Dos Universitario serán iguales si y sólo si son del mismo Tipo y su Legajo o DNI son iguales.
+        /// Dos Universitario son iguales si y sólo si son del mismo Tipo y su Legajo o DNI son iguales.
         /// </summary>
         /// <param name="pg1"></param>
         /// <param name="pg2"></param>

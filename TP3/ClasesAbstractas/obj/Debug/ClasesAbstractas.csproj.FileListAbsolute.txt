@@ -5,3 +5,10 @@ C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\Bednarz.Jorge.2C.TP3\ClasesAbs
 C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\Bednarz.Jorge.2C.TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.csprojResolveAssemblyReference.cache
 C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\Bednarz.Jorge.2C.TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.dll
 C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\Bednarz.Jorge.2C.TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.pdb
+C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\ClasesAbstractas\bin\Debug\ClasesAbstractas.dll
+C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\ClasesAbstractas\bin\Debug\ClasesAbstractas.pdb
+C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\ClasesAbstractas\bin\Debug\Excepciones.dll
+C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\ClasesAbstractas\bin\Debug\Excepciones.pdb
+C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.csprojResolveAssemblyReference.cache
+C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.dll
+C:\Users\Iurko\Desktop\2018 - PROGRAMACION II\TP3\ClasesAbstractas\obj\Debug\ClasesAbstractas.pdb

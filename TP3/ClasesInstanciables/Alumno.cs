@@ -33,7 +33,7 @@ namespace ClasesInstanciables
         
         #region METODOS
         /// <summary>
-        /// Sobreescribirá el método MostrarDatos con todos los datos del alumno.
+        /// Muestra todos los datos del alumno.
         /// </summary>
         /// <returns></returns>
         protected override string MostrarDatos()
@@ -47,7 +47,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// Retornará la cadena "TOMA CLASE DE " junto al nombre de la clase que toma.
+        /// Retorna la cadena "TOMA CLASE DE " junto al nombre de la clase que toma.
         /// </summary>
         /// <returns></returns>
         protected override string ParticiparEnClase()

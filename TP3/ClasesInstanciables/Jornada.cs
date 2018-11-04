@@ -17,7 +17,7 @@ namespace ClasesInstanciables
 
         #region CONSTRUCTORES
         /// <summary>
-        /// Se inicializará la lista de alumnos en el constructor por defecto.
+        /// Se inicializa la lista de alumnos en el constructor por defecto.
         /// </summary>
         private Jornada()
         {
@@ -54,7 +54,7 @@ namespace ClasesInstanciables
 
         #region METODOS
         /// <summary>
-        /// Guardar de clase guardará los datos de la Jornada en un archivo de texto.
+        /// Guarda los datos de la Jornada en un archivo de texto.
         /// </summary>
         /// <param name="jornada"></param>
         /// <returns></returns>
@@ -65,7 +65,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// Leer de clase retornará los datos de la Jornada como texto.
+        /// Retorna los datos de la Jornada como texto.
         /// </summary>
         /// <returns></returns>
         public string Leer()
@@ -100,7 +100,7 @@ namespace ClasesInstanciables
 
         #region SOBRECARGAS
         /// <summary>
-        /// Agregar Alumnos a la clase por medio del operador +, validando que no estén previamente cargados.
+        /// Agrega Alumnos a la clase por medio del operador +, validando que no estén previamente cargados.
         /// </summary>
         /// <param name="j"></param>
         /// <param name="a"></param>

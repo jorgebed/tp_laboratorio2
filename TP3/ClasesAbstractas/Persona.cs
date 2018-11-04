@@ -73,7 +73,7 @@ namespace EntidadesAbstractas
 
         #region METODOS
         /// <summary>
-        /// ToString retornará los datos de la Persona.
+        /// Retorna los datos de la Persona.
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -88,9 +88,9 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// Se deberá validar que el DNI sea correcto, teniendo en cuenta su nacionalidad. 
+        /// Valida que el DNI sea correcto, teniendo en cuenta su nacionalidad. 
         /// Argentino entre 1 y 89999999 y Extranjero entre 90000000 y 99999999. 
-        /// Caso contrario, se lanzará la excepción NacionalidadInvalidaException.
+        /// Caso contrario, lanzará la excepción NacionalidadInvalidaException.
         /// </summary>
         /// <param name="nacionalidad"></param>
         /// <param name="dato"></param>
@@ -106,7 +106,7 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// Si el DNI presenta un error de formato (más caracteres de los permitidos, letras, etc.) se lanzará DniInvalidoException.
+        /// Si el DNI presenta un error de formato (más caracteres de los permitidos, letras, etc.) lanzará DniInvalidoException.
         /// </summary>
         /// <param name="nacionalidad"></param>
         /// <param name="dato"></param>
@@ -122,7 +122,7 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// Validará que los nombres sean cadenas con caracteres válidos para nombres. Caso contrario, no se cargará.
+        /// Valida que los nombres sean cadenas con caracteres válidos para nombres. Caso contrario, no se cargará.
         /// </summary>
         /// <param name="dato"></param>
         /// <returns></returns>
@@ -135,7 +135,7 @@ namespace EntidadesAbstractas
                 isOk = char.IsLetter(dato, i);
                 if (!isOk)
                 {
-                    dato = null;
+                    dato = string.Empty;
                     break;
                 }
             }

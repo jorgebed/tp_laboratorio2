@@ -50,7 +50,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// Sobrescribir el método MostrarDatos con todos los datos del profesor.
+        /// Muestra todos los datos del profesor.
         /// </summary>
         /// <returns></returns>
         protected override string MostrarDatos()
@@ -64,7 +64,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// ParticiparEnClase retornará la cadena "CLASES DEL DÍA" junto al nombre de la clases que da.
+        /// Retorna la cadena "CLASES DEL DÍA" junto al nombre de la clases que da.
         /// </summary>
         /// <returns></returns>
         protected override string ParticiparEnClase()
