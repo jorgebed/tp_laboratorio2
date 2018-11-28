@@ -15,7 +15,6 @@ namespace MainCorreo
     {
         private Correo correo;
         private Paquete paquete;
-        private ContextMenu cmsLista = new ContextMenu();
 
         public FrmPpal()
         {
@@ -24,28 +23,17 @@ namespace MainCorreo
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            string direccion = this.txtDireccion.Text;
-            string trackingID = this.mtxtTrackingID.Text;
-
-            if (direccion == "")
-                MessageBox.Show("Es necesario ingresar una dirección");
-            if (trackingID == "")
-                MessageBox.Show("Para realizar un seguimiento es necesario ingresar TrackingID");
-            if (direccion != "" && trackingID != "")
+        {           
+            paquete = new Paquete(this.txtDireccion.Text, this.mtxtTrackingID.Text);
+            paquete.InformarEstado += paq_InformaEstado;
+            try
             {
-                paquete = new Paquete(this.txtDireccion.Text, this.mtxtTrackingID.Text);
-                paquete.InformarEstado += paq_InformaEstado;
-                try
-                {
-                    correo += paquete;
-                    //this.ActualizarEstados();
-                }
-                catch (TrackingIdRepetidoException ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }            
+                correo += paquete;
+            }
+            catch (TrackingIdRepetidoException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ActualizarEstados()
@@ -84,7 +72,7 @@ namespace MainCorreo
                 else if (elemento is Correo)
                     rtbMostrar.Text = ((Correo)elemento).MostrarDatos((Correo)elemento);
                 
-                rtbMostrar.Text.Guardar("Correo.txt");
+                rtbMostrar.Text.Guardar("Salida.txt");
             }
         }
 
@@ -101,12 +89,7 @@ namespace MainCorreo
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
-        }
-
-        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
-        }
+        }        
 
         private void paq_InformaEstado(object sender, EventArgs e)
         {
@@ -115,10 +98,13 @@ namespace MainCorreo
                 Paquete.DelegadoEstado d = new Paquete.DelegadoEstado(paq_InformaEstado);
                 this.Invoke(d, new object[] { sender, e });
             }
-            else
-            {
+            else            
                 ActualizarEstados();
-            }
+        }
+
+        private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
         }
     }
 }

@@ -12,18 +12,23 @@ namespace Entidades
         private List<Thread> mockPaquetes;
         private List<Paquete> paquetes;
 
+        #region CONSTRUCTORES
         public Correo()
         {
             this.mockPaquetes = new List<Thread>();
             this.paquetes = new List<Paquete>();
         }
+        #endregion        
         
-        public List<Paquete> Paquetes 
+        #region PROPIEDADES
+        public List<Paquete> Paquetes
         {
             get { return this.paquetes; }
             set { this.paquetes = value; }
         }
+        #endregion
 
+        #region METODOS
         /// <summary>
         /// Cierra todos los hilos activos
         /// </summary>
@@ -43,23 +48,27 @@ namespace Entidades
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             StringBuilder sb = new StringBuilder();
-           
-            foreach (Paquete item in ((Correo)elementos).Paquetes)
+            if (elementos is Correo)
             {
-                sb.AppendFormat("{0} para {1} ({2})", item.TrackingID, item.DireccionEntrega, item.Estado.ToString());
-                sb.AppendLine();
+                foreach (Paquete item in ((Correo)elementos).Paquetes)
+                {
+                    sb.AppendFormat("{0} para {1} ({2})", item.TrackingID, item.DireccionEntrega, item.Estado.ToString());
+                    sb.AppendLine();
+                }
             }
-          
-            return sb.ToString();            
+            
+            return sb.ToString();
         }
+        #endregion
 
+        #region SOBRECARGAS
         // Controla si el paquete ya está en la lista, sino lo agrega
         public static Correo operator +(Correo c, Paquete p)
         {
             foreach (Paquete item in c.Paquetes)
             {
                 if (item == p)
-                    throw new TrackingIdRepetidoException("El paquete ya se encuentra cargado.");
+                    throw new TrackingIdRepetidoException(String.Format("El Tracking ID {0} ya figura en la lista de envios.", p.TrackingID));
             }
             // Agrega el paquete.
             c.paquetes.Add(p);
@@ -71,5 +80,6 @@ namespace Entidades
             hilo.Start();
             return c;
         }
+        #endregion        
     }
 }

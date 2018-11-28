@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Entidades
 {
@@ -47,24 +48,32 @@ namespace Entidades
 
         #region METODOS
         public void MockCicloDeVida()
-        {            
+        {
             while (this.Estado != EEstado.Entregado)
-            {                
+            {
                 this.InformarEstado.Invoke(this, null);
+                // Espera 4 segundos.
+                System.Threading.Thread.Sleep(4000);
                 // Pasa al próximo enumerado.
                 int estado = (int)this.Estado + 1;
                 // Le asigno el nuevo estado.
-                this.Estado = (EEstado)estado;
-                // Espera 4 segundos.
-                System.Threading.Thread.Sleep(4000);
-            }
+                this.Estado = (EEstado)estado;                
+            }            
             this.InformarEstado.Invoke(this, null);
-            PaqueteDAO.Insertar(this);
+
+            try
+            {
+                PaqueteDAO.Insertar(this);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("ERROR al insertar el dato en la Base de Datos");
+            }            
         }
 
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
-            return String.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
+            return String.Format("{0} para {1} ", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
         }
 
         /// <summary>
