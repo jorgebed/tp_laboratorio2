@@ -104,7 +104,7 @@ namespace MainCorreo
 
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
+            rtbMostrar.Text = lstEstadoEntregado.SelectedItem.ToString();          
         }
     }
 }

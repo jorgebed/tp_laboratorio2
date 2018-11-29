@@ -33,7 +33,7 @@
             this.btnMostrarTodos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstEstadoEntregado = new System.Windows.Forms.ListBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblEstadoIngresado = new System.Windows.Forms.Label();
             this.lstEstadoEnViaje = new System.Windows.Forms.ListBox();
@@ -47,7 +47,7 @@
             this.mtxtTrackingID = new System.Windows.Forms.MaskedTextBox();
             this.rtbMostrar = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.cmsMenu.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,25 +88,25 @@
             // 
             // lstEstadoEntregado
             // 
-            this.lstEstadoEntregado.ContextMenuStrip = this.contextMenuStrip1;
+            this.lstEstadoEntregado.ContextMenuStrip = this.cmsMenu;
             this.lstEstadoEntregado.FormattingEnabled = true;
             this.lstEstadoEntregado.Location = new System.Drawing.Point(347, 49);
             this.lstEstadoEntregado.Name = "lstEstadoEntregado";
             this.lstEstadoEntregado.Size = new System.Drawing.Size(150, 147);
             this.lstEstadoEntregado.TabIndex = 6;
             // 
-            // contextMenuStrip1
+            // cmsMenu
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mostrarToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
-            this.contextMenuStrip1.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
+            this.cmsMenu.Name = "contextMenuStrip1";
+            this.cmsMenu.Size = new System.Drawing.Size(116, 26);
+            this.cmsMenu.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
             // 
             // mostrarToolStripMenuItem
             // 
             this.mostrarToolStripMenuItem.Name = "mostrarToolStripMenuItem";
-            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.mostrarToolStripMenuItem.Text = "Mostrar";
             this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
             // 
@@ -217,7 +217,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 329);
-            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.rtbMostrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -227,7 +226,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPpal_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.cmsMenu.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -251,7 +250,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbMostrar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip cmsMenu;
         private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem;
     }
 }
