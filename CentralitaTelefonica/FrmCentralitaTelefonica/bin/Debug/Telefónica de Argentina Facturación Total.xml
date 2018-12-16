@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<string>---------------------------------------
+        TELEFÓNICA DE ARGENTINA
+---------------------------------------
+GANANCIA LOCAL:              |  $177,00
+-----------------------------|---------
+GANANCIA PROVINCIAL:         |   $18,53
+-----------------------------|---------
+GANANCIA TODAS:              |  $195,53
+-----------------------------|---------
+---------------------------------------
+           LISTA DE LLAMADOS
+---------------------------------------
+NUMERO ORIGEN: 0800 - 333 - 9285
+NUMERO DESTINO: 1111 - 5555
+DURACION: 6 segundos.
+COSTO: $36,00
+---------------------------------------
+NUMERO ORIGEN: 0800 - 333 - 9285
+NUMERO DESTINO: 7777 - 7777
+DURACION: 4 segundos.
+COSTO: $32,00
+---------------------------------------
+NUMERO ORIGEN: 0800 - 333 - 9285
+NUMERO DESTINO: #222 - 5874
+DURACION: 9 segundos.
+COSTO: $8,91
+FRANJA HORARIA: Franja_1
+---------------------------------------
+NUMERO ORIGEN: 0800 - 333 - 9285
+NUMERO DESTINO: 4200 - 9955
+DURACION: 3 segundos.
+COSTO: $45,00
+---------------------------------------
+NUMERO ORIGEN: 0800 - 333 - 9285
+NUMERO DESTINO: 4365 - 1478
+DURACION: 4 segundos.
+COSTO: $64,00
+---------------------------------------
+NUMERO ORIGEN: 0800 - 333 - 9285
+NUMERO DESTINO: #437 - 8566
+DURACION: 7 segundos.
+COSTO: $4,62
+FRANJA HORARIA: Franja_3
+---------------------------------------
+NUMERO ORIGEN: 0800 - 333 - 9285
+NUMERO DESTINO: #254 - 7633
+DURACION: 4 segundos.
+COSTO: $5,00
+FRANJA HORARIA: Franja_2
+---------------------------------------
+</string>
